@@ -1,25 +1,31 @@
+<?php 
+/*
+Template Name: Catalog | Каталог
+Template Post Type: page
+*/
+?>
 <?php get_template_part('template-parts/header/header'); ?>
 
     <!-- hero -->
-        <section class="hero page catalog">
-            <div class="container">
+    <section class="hero page catalog">
+        <div class="container">
 
-                <!-- breadcrumb -->
-                <div class="breadcrumb">
-                    <a href="index.html">Главная</a>
-                    <span>/</span>
-                    <a href="catalog.html" class="active">Все кейсы</a>
-                </div>
-
-                <div class="main_title">
-                    Все кейсы
-                </div>
-
-                <div class="sub_title">
-                    Каждое изделие из каталога может быть доработано и оснащено в соответствии с вашим уникальным ТЗ.
-                </div>
+            <!-- breadcrumb -->
+            <div class="breadcrumb">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <a href="catalog.html" class="active">Все кейсы</a>
             </div>
-        </section>
+
+            <div class="main_title">
+                Все кейсы
+            </div>
+
+            <div class="sub_title">
+                Каждое изделие из каталога может быть доработано и оснащено в соответствии с вашим уникальным ТЗ.
+            </div>
+        </div>
+    </section>
 
         <!--catalog  -->
         <section class="catalog">

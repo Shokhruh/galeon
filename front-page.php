@@ -1,6 +1,65 @@
 <?php get_template_part( 'template-parts/header/header' )?>
 
-		<?php get_template_part( 'template-parts/content/content', 'hero') ?>
+		<!-- hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="main_title">
+                    <?= get_field('hero_section')['title']; ?>
+                </div>
+
+                <div class="sub_title">
+                    <?= get_field('hero_section')['info']; ?>
+                </div>
+
+                <a href="<?= get_field('hero_section')['button_link']; ?>" class="button">
+                    <?= get_field('hero_section')['button_text']; ?>
+                </a>
+
+                <div class="information">
+                    <!-- info item -->
+                    <div class="info_item">
+                        <img src="assets/images/hero_info1.svg" alt="">
+                        <div class="text">Класс защиты IP65 и выше</div>
+                    </div>
+
+                    <!-- info item -->
+                    <div class="info_item">
+                        <img src="assets/images/hero_info2.svg" alt="">
+                        <div class="text">Мягкий поропласт</div>
+                    </div>
+
+                    <!-- info item -->
+                    <div class="info_item">
+                        <img src="assets/images/hero_info3.svg" alt="">
+                        <div class="text">Производятся в России</div>
+                    </div>
+                </div>
+
+                <a class="hero_link" href="#">
+                    
+                    <img src="assets/images/straight_arrow.svg" alt="">
+                    <span><?= get_field('hero_section')['slider_text']; ?></span>
+                </a>
+                
+
+                <!-- Dots with tooltips -->
+                <div class="dot first">
+                    <div class="tooltip"><?= get_field('hero_section')['case_info_1']; ?></div>
+                </div>
+
+                <div class="dot second" >
+                    <div class="tooltip"><?= get_field('hero_section')['case_info_2']; ?></div>
+                </div>
+
+                <div class="dot third" >
+                    <div class="tooltip"><?= get_field('hero_section')['case_info_3']; ?></div>
+                </div>
+
+                <div class="dot fourth" >
+                    <div class="tooltip"><?= get_field('hero_section')['case_info_4']; ?></div>
+                </div>
+            </div>
+        </section>
 
 		<!-- production -->
         <section class="production">
@@ -8,7 +67,7 @@
                 <!-- Swiper Container -->
                 <div class="swiper preproduction">
                     <div class="section_title">
-                        Производственные возможности
+                        <?= get_field('production_section')['title'];?>
                     </div>
                     <div class="swiper-wrapper">
                         <!-- slide -->
@@ -133,7 +192,7 @@
         <section class="products" id="products">
             <div class="container">
                 <div class="top">
-                    <div class="section_title">Наша продукция</div>
+                    <div class="section_title"><?= get_field('product_section')['title'] ?></div>
                     <a href="catalog.html" class="download">
                         Смотреть каталог
                     </a>
@@ -194,53 +253,44 @@
         <div class="advantages" id="information">
             <div class="container">
                 <a href="production.html" class="section_title">
-                    Преимущества производства
+                    <?= get_field('advantages_section')['title']; ?>
                 </a>
                 <div class="sub_title">
-                    Контролируем каждый этап создания вашей продукции. <br>
-                    Полный производственный цикл на собственных мощностях позволяет нам гарантировать качество, соблюдать сроки и брать на себя всю ответственность за конечный результат. 
+                    <?= get_field('advantages_section')['info']; ?> 
                 </div>
 
                 <div class="button open-modal-btn">
-                    Узнать подробнее
+                    <?= get_field('advantages_section')['modal_text']; ?>
                 </div>
 
                 <div class="advantages_row">
-                    <!-- advantage item -->
-                    <a href="production.html" class="advantage_item">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/advantage1.svg" alt="">
-                        <div class="info_row">
-                            <div class="title">Многоуровневый контроль качества</div>
-                            <div class="info">Ваши изделия проходят строгую проверку: 5-этапное тестирование на вибростенде и ультразвуковой контроль сварных швов, обеспечивая их надежность в суровых условиях.</div>
-                        </div>
-                    </a>
+                    <?php 
+						global $post;
 
-                    <!-- advantage item -->
-                    <a href="production.html"  class="advantage_item">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/advantage2.svg" alt="">
-                        <div class="info_row">
-                            <div class="title">Собственное конструкторское бюро</div>
-                            <div class="info">Ваша задача получает точное инженерное воплощение: наши инженеры-конструкторы тесно сотрудничают с производством, находя оптимальные решения по материалам и интеграции систем.</div>
-                        </div>
-                    </a>
+						$query = new WP_Query( array(
+							'post_type' => 'advantage',
+							'posts_per_page' => 4,
+							'order' => 'ASC',
+						) );
 
-                    <!-- advantage item -->
-                    <a href="production.html"  class="advantage_item">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/advantage3.svg" alt="">
-                        <div class="info_row">
-                            <div class="title">Ответственность в «Едином окне»</div>
-                            <div class="info">Вы получаете одного ответственного исполнителя, который занимается всем: от ТЗ и проектирования до производства, интеграции и тестирования, что экономит ваше время и упрощает коммуникацию.</div>
-                        </div>
-                    </a>
-
-                    <!-- advantage item -->
-                    <a href="production.html"  class="advantage_item">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/advantage4.svg" alt="">
-                        <div class="info_row">
-                            <div class="title">Опыт работы со сложными проектами</div>
-                            <div class="info">Нам доверяют ведущие предприятия промышленности, оборонного сектора и экстренных служб. Мы учитываем специфику работы с заказами, требующими соблюдения стандартов и конфиденциальности.</div>
-                        </div>
-                    </a>
+						if ($query->have_posts()) {
+							while ($query->have_posts()) {
+								$query->the_post();
+								?>
+									<!-- advantage item -->
+                                    <a href="/production" class="advantage_item">
+                                        <img src="<?php the_post_thumbnail_url()?>" alt="">
+                                        <div class="info_row">
+                                            <div class="title"><?php the_title(); ?></div>
+                                            <div class="info"><?php the_content(); ?></div>
+                                        </div>
+                                    </a>
+								<?php
+							}
+						} else {
+							echo '<p class="text-danger">No Advantages found.</p>';
+						}
+					?>
                 </div>
 
               
@@ -252,12 +302,13 @@
             <div class="container">
                 <div class="application_row">
                     <div class="left">
-                        <!-- <img src="<?= get_template_directory_uri(); ?>/assets/images/application_image.svg" alt=""> -->
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/application_image.svg" alt="">
                     </div>
                     <div class="right">
-                        <div class="section_title">Свяжитесь с нами</div>
+                    
+                        <div class="section_title"><?= get_custom_field('field_68fd44facd8cb') ?></div>
                         <div class="sub_title">
-                            Заполните форму, мы свяжемся и проконсультируем Вас в кратчайшие сроки
+                            <?= get_custom_field('field_68fd4508cd8cc'); ?>
                         </div>
                         <form action="">
                             <input type="text" required placeholder="Ваше Имя*">

@@ -4,18 +4,19 @@
                 <div class="footer_row">
                     <div class="top">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="/">
+                                
                                 <img src="<?= get_template_directory_uri(); ?>/assets/images/footer_logo.svg" alt="">
                             </a>
                             <div class="logo_text">
-                                Российское производство ударопрочных кейсов для критически важного оборудования
+                                <?= get_custom_field("field_68fd12ace6738"); ?>
                             </div>
                         </div>
 
                         <div class="nav_row">
                             <div class="nav_item">
                                 <div class="title">
-                                    Каталог
+                                    <?= get_custom_field("field_68fd1b44cf70e"); ?>
                                 </div>
                                 <a href="catalog.html">Мини кейсы</a>
                                 <a href="catalog.html">Средние кейсы</a>
@@ -25,9 +26,9 @@
                                 <a href="catalog.html">Контейнеры</a>
                             </div>
 
-                            <div class="nav_item">
+                            <!-- <div class="nav_item">
                                 <div class="title">
-                                    Разделы
+                                    <?= get_custom_field("field_68fd1b7acf70f"); ?>
                                 </div>
                                 <a href="index.html">Главная</a>
                                 <a href="production.html">Информация</a>
@@ -35,18 +36,31 @@
                                 <a href="contact.html">Контакты</a>
                                 <a href="catalog.html">Кейсы для ноутбуков</a>
                                 <a href="catalog.html">Контейнеры</a>
-                            </div>
+                            </div> -->
 
                             <div class="nav_item">
                                 <div class="title">
-                                    Контакты
+                                    <?= get_field("field_68fd1b7acf70f", "option"); ?>
                                 </div>
-                                <span> Москва ул. Плеханова д.7, эт. 1, пом. I ком 25</span>
+                                <?php
+                                    wp_nav_menu([
+                                        'theme_location' => 'footer_right', // o'zingiz ro'yxatdan o'tkazgan joy
+                                        'container' => false,
+                                        'walker' => new Custom_Footer_Walker(),
+                                    ]);
+                                ?>
+                            </div>
+
+
+                            <div class="nav_item">
+                                <div class="title">
+                                    <?= get_custom_field("field_68fd1b8dcf710"); ?>
+                                </div>
+                                <span> <?= get_custom_field("field_68fd13ae5d592"); ?></span>
                                 <div class="nav_item_block">
-                                    <a class="link"  href="tel:74950236793">+7 495 023 67 93</a>
-                                    <span>Пн-Пт: с 10:00 до 18:00</span>
+                                    <a class="link"  href="tel:<?= get_custom_field("field_68fd17734acfa"); ?>"><?= get_custom_field("field_68fd13755d58f"); ?></a>
                                 </div>
-                                <a class="link" href="mailto:info@galeoncase.ru">info@galeoncase.ru</a>
+                                <a class="link" href="mailto:<?= get_custom_field("field_68fd12cbe6739"); ?>"><?= get_custom_field("field_68fd12cbe6739"); ?></a>
                             </div>
 
                         </div>
@@ -54,10 +68,10 @@
 
                     <div class="bottom">
                         <div class="info">
-                            <div class="rights text">Все права защищены 2025© </div>
-                            <a href="assets/documents/Privacy_Policy_Extended.pdf" target="_blank" class="politics text">Политика конфедициальности</a>
+                            <div class="rights text"><?= get_field('author'); ?> </div>
+                            <a href="<?= get_field('privacy_file'); ?>" target="_blank" class="politics text"><?= get_field('privacy'); ?></a>
                         </div>
-                        <a href="#header" class="up_link">Наверх</a>
+                        <a href="#header" class="up_link"><?= get_field('up'); ?></a>
                     </div>
                 </div>
             </div>

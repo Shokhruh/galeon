@@ -1,3 +1,9 @@
+<?php 
+/*
+Template Name: Contact | Контакты
+Template Post Type: page
+*/
+?>
 <?php get_template_part('template-parts/header/header'); ?>
 
     <!-- contact -->

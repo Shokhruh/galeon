@@ -1,3 +1,9 @@
+<?php 
+/*
+Template Name: Profile | Профиль
+Template Post Type: page
+*/
+?>
 <?php get_template_part('template-parts/header/header'); ?>
 
     <div class="container">
