@@ -1,0 +1,17 @@
+[33mcommit 3169018cac1b100f6238293f5e9f797f8bb61126[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Shoxruh Daminov <shokhruh1197@gmail.com>
+Date:   Sun Oct 26 10:38:43 2025 +0500
+
+    front page ACF va header_footer dynamic with acf
+
+[33mcommit c28018563b90e5c28cde613bb37c2f2cfd5b3072[m
+Author: Shoxruh Daminov <shokhruh1197@gmail.com>
+Date:   Sat Oct 25 20:34:16 2025 +0500
+
+    template sahifalarni yaratdim va html fayllarni ochirdim
+
+[33mcommit 4fc30b496bd140a3e0c58606b3ffe88aab662bac[m
+Author: shokhruh1197 <shokhruh1197@gmail.com>
+Date:   Sat Oct 25 16:23:38 2025 +0500
+
+    barcha fayllarni yuklash

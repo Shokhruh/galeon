@@ -18,26 +18,26 @@
                 <div class="information">
                     <!-- info item -->
                     <div class="info_item">
-                        <img src="assets/images/hero_info1.svg" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/hero_info1.svg" alt="">
                         <div class="text">Класс защиты IP65 и выше</div>
                     </div>
 
                     <!-- info item -->
                     <div class="info_item">
-                        <img src="assets/images/hero_info2.svg" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/hero_info2.svg" alt="">
                         <div class="text">Мягкий поропласт</div>
                     </div>
 
                     <!-- info item -->
                     <div class="info_item">
-                        <img src="assets/images/hero_info3.svg" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/hero_info3.svg" alt="">
                         <div class="text">Производятся в России</div>
                     </div>
                 </div>
 
                 <a class="hero_link" href="#">
                     
-                    <img src="assets/images/straight_arrow.svg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/straight_arrow.svg" alt="">
                     <span><?= get_field('hero_section')['slider_text']; ?></span>
                 </a>
                 
@@ -302,7 +302,7 @@
             <div class="container">
                 <div class="application_row">
                     <div class="left">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/application_image.svg" alt="">
+                        
                     </div>
                     <div class="right">
                     
@@ -310,23 +310,7 @@
                         <div class="sub_title">
                             <?= get_custom_field('field_68fd4508cd8cc'); ?>
                         </div>
-                        <form action="">
-                            <input type="text" required placeholder="Ваше Имя*">
-                            <div class="input_block">
-                                <input required type="tel" id="phone" placeholder="+7 999 999 99 99*">
-                            </div>
-                            <textarea name="" id="" placeholder="Комментарий"></textarea>
-                            <button>Оставить заявку</button>
-
-                            <!-- custom confirm -->
-                            <div class="confirm">
-                                <label class="custom-checkbox">
-                                    <input required checked type="checkbox" id="confirm">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="confirm" class="text">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих <a  href="assets/documents/Personal_Data_Processing_Extended.pdf" target="_blank">персональных данных</a></label>
-                            </div>
-                        </form>
+                        <?= do_shortcode( '[contact-form-7 id="e10ddee" title="homepage contact form"]' )?>
                     </div>
                 </div>
             </div>

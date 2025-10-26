@@ -26,17 +26,6 @@
                                 <a href="catalog.html">Контейнеры</a>
                             </div>
 
-                            <!-- <div class="nav_item">
-                                <div class="title">
-                                    <?= get_custom_field("field_68fd1b7acf70f"); ?>
-                                </div>
-                                <a href="index.html">Главная</a>
-                                <a href="production.html">Информация</a>
-                                <a href="tool.html">Производство</a>
-                                <a href="contact.html">Контакты</a>
-                                <a href="catalog.html">Кейсы для ноутбуков</a>
-                                <a href="catalog.html">Контейнеры</a>
-                            </div> -->
 
                             <div class="nav_item">
                                 <div class="title">
@@ -68,10 +57,10 @@
 
                     <div class="bottom">
                         <div class="info">
-                            <div class="rights text"><?= get_field('author'); ?> </div>
-                            <a href="<?= get_field('privacy_file'); ?>" target="_blank" class="politics text"><?= get_field('privacy'); ?></a>
+                            <div class="rights text"><?= get_custom_field('field_68fd108a0136f'); ?></div>
+                            <a href="<?= get_template_directory_uri(); ?>/assets/documents/Personal_Data_Processing_Extended.pdf" target="_blank" class="politics text"><?= get_custom_field('field_68fd10a801370'); ?></a>
                         </div>
-                        <a href="#header" class="up_link"><?= get_field('up'); ?></a>
+                        <a href="#header" class="up_link"><?= get_custom_field('field_68fd10d401372'); ?></a>
                     </div>
                 </div>
             </div>
@@ -165,7 +154,7 @@
                 <div class="tab_item register" onclick="openTab('register',this)">Регистрация</div>
             </div>
 
-            <form action="" class="form-register form_item" id="form-register">
+            <form action="" class="form-register form_item" id="form-register1">
                 <input type="text" required placeholder="Имя">
                 <input type="email" required placeholder="E-mail">
 
@@ -186,14 +175,14 @@
                 <!-- custom confirm -->
                 <div class="confirm">
                     <label class="custom-checkbox">
-                        <input required checked type="checkbox" id="confirmprofile">
+                        <input required checked type="checkbox" id="confirmprofile1">
                         <span class="checkmark"></span>
                     </label>
-                    <label for="confirmprofile" class="text">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих <a  href="assets/documents/Personal_Data_Processing_Extended.pdf" target="_blank">персональных данных</a></label>
+                    <label for="confirmprofile1" class="text">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих <a  href="assets/documents/Personal_Data_Processing_Extended.pdf" target="_blank">персональных данных</a></label>
                 </div>
             </form>
 
-            <form action="" class="form-login form_item active" id="form-login">
+            <form action="" class="form-login form_item active" id="form-login1">
                 <input required type="email" placeholder="E-mail">
 
                 <div class="password-wrapper">
@@ -219,7 +208,7 @@
             </div>
 
 
-            <form action="" class="form-register ">
+            <form action="" class="form-register">
                 <input required type="email" placeholder="E-mail">
 
                 <button type="submit">Отправить ссылку</button>
@@ -371,20 +360,7 @@
 
 	<?php wp_footer(); ?>
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <!-- Juqery -->
-    <script src="assets/libs/jquery-3.6.0.min.js"></script>
-    <!-- Load Inputmask -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
-    <!-- yandex JS -->    
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-   <!-- sweet alert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- JS -->
-    <script src="./assets/js/scripts.js"></script>
+    
 </body>
 
 </html>

@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
-
     // Add to Cart button
     document.querySelectorAll(".cart_btn").forEach(btn => {
       btn.addEventListener("click", () => {

@@ -10,6 +10,7 @@
         wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons' );
         wp_enqueue_style( 'galeon-font', get_template_directory_uri() . '/assets/fonts/font.css' );
         wp_enqueue_style( 'galeon-main', get_template_directory_uri() . '/assets/css/main.css' );
+        wp_enqueue_style( 'galeon-main', get_template_directory_uri() . '/assets/css/custom.css' );
     }
     add_action('wp_enqueue_scripts', 'galeon_enqueue_styles');
 

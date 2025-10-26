@@ -21,3 +21,6 @@
         die();
     }
 
+    // CF7 form markupidagi <p> va <br> avtomatik teglardan xalos bo‘lish
+    add_filter('wpcf7_autop_or_not', '__return_false');
+

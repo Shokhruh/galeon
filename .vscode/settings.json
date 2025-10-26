@@ -1,0 +1,33 @@
+{
+  // Avtomatik formatlash
+  "editor.formatOnSave": true,
+
+  // Tab o'rniga 2ta bo‘sh joy
+  "editor.tabSize": 2,
+
+  // Faylni saqlaganda trailing space’larni tozalash
+  "files.trimTrailingWhitespace": true,
+
+  // Sass compiler yoki Live Sass o‘rniga VSCode watch
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    }
+  ],
+
+  // Saqlanganda SCSS fayllarni avtomatik kompilyatsiya qilish
+  "liveSassCompile.settings.generateMap": false,
+
+  // SCSS fayl ichidagi rang preview
+  "editor.colorDecorators": true,
+
+  // Prettier integratsiyasi (agar ishlatayotgan bo‘lsangiz)
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
